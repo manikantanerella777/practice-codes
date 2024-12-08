@@ -1,0 +1,13 @@
+body {
+    color: rgb(217, 224, 20);
+    width: 0%;
+    
+} 
+h1 {
+    color: blue;
+    height: 50;
+    symbols: -moz-element();
+}
+h2 {
+    color: red;
+}

@@ -1,0 +1,181 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Number Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #feedback {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Guess the Number Game</h1>
+  </header>
+
+  <div class="container">
+    <p>Guess a number between 1 and 100:</p>
+    <input type="number" id="userGuess" min="1" max="100">
+    <button onclick="checkGuess()">Submit Guess</button>
+    <p id="feedback"></p>
+    <button onclick="resetGame()">Reset Game</button>
+  </div>
+
+  <script>
+    // JavaScript for game logic
+    const secretNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+
+    function checkGuess() {
+      const userGuess = document.getElementById('userGuess').value;
+      attempts++;
+
+      const feedbackElement = document.getElementById('feedback');
+
+      if (userGuess == secretNumber) {
+        feedbackElement.textContent = `Congratulations! You guessed the number ${secretNumber} in ${attempts} attempts.`;
+        disableInputAndButton();
+      } else if (userGuess < secretNumber) {
+        feedbackElement.textContent = 'Too low. Try again.';
+      } else {
+        feedbackElement.textContent = 'Too high. Try again.';
+      }
+    }
+
+    function resetGame() {
+      document.getElementById('userGuess').value = '';
+      document.getElementById('feedback').textContent = '';
+      enableInputAndButton();
+      secretNumber = Math.floor(Math.random() * 100) + 1;
+      attempts = 0;
+    }
+
+    function disableInputAndButton() {
+      document.getElementById('userGuess').disabled = true;
+      document.querySelector('button').disabled = true;
+    }
+
+    function enableInputAndButton() {
+      document.getElementById('userGuess').disabled = false;
+      document.querySelector('button').disabled = false;
+    }
+  </script>
+
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guess the Number Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #guess-input {
+      padding: 8px;
+      font-size: 16px;
+      margin-right: 8px;
+    }
+
+    #submit-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #feedback {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Guess the Number (1-50)</h1>
+    <p>Enter your guess:</p>
+    <input type="number" id="guess-input" min="1" max="50" />
+    <button id="submit-button" onclick="checkGuess()">Submit</button>
+    <p id="feedback"></p>
+  </div>
+
+  <script>
+    function checkGuess() {
+      const secretNumber = Math.floor(Math.random() * 50) + 1; // Generates a random number between 1 and 50
+      const userGuess = parseInt(document.getElementById('guess-input').value);
+
+      if (isNaN(userGuess) || userGuess < 1 || userGuess > 50) {
+        document.getElementById('feedback').innerText = 'Please enter a valid number between 1 and 50.';
+      } else if (userGuess === secretNumber) {
+        document.getElementById('feedback').innerText = 'Congratulations! You guessed the correct number.';
+      } else if (userGuess < secretNumber) {
+        document.getElementById('feedback').innerText = 'Too low. Try again!';
+      } else {
+        document.getElementById('feedback').innerText = 'Too high. Try again!';
+      }
+    }
+  </script>
+
+</body>
+</html>

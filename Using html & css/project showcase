@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Showcase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .product {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .product img {
+      max-width: 200px;
+      max-height: 150px;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      flex-grow: 1;
+      margin-left: 20px;
+    }
+
+    .product h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .product p {
+      color: #666;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Product Showcase</h1>
+  </header>
+
+  <div class="container">
+    <div class="product">
+      <img src="product1.jpg" alt="Product 1">
+      <div class="product-info">
+        <h2>Product 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris et bibendum feugiat.</p>
+        <a href="#" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="product2.jpg" alt="Product 2">
+      <div class="product-info">
+        <h2>Product 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, mauris et bibendum feugiat.</p>
+        <a href="#" class="btn">View Details</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
