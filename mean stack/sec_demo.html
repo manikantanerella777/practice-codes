@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body style="background-color: #181830; color: #c3b8b8; font-family: Arial, sans-serif; padding: 20px;">
+    <h1 style="text-align: center;">Registration Form</h1>
+    <p style="text-align: center;">Please fill out this form with the required information</p>
+    <form style="max-width: 400px; margin: auto;">
+        <label for="first-name">Enter Your First Name:</label><br>
+        <input type="text" id="first-name" name="first-name" style="width: 100%; margin-bottom: 10px;"><br>
+
+        <label for="last-name">Enter Your Last Name:</label><br>
+        <input type="text" id="last-name" name="last-name" style="width: 100%; margin-bottom: 10px;"><br>
+
+        <label for="email">Enter Your Email:</label><br>
+        <input type="email" id="email" name="email" style="width: 100%; margin-bottom: 10px;"><br>
+
+        <label for="password">Create a New Password:</label>&#128269;<br>
+        <input type="password" id="password" name="password" style="width: 100%; margin-bottom: 10px;"><br>
+
+        <p>Account type (required)</p>
+        <input type="radio" id="personal" name="account-type" value="personal">
+        <label for="personal">Personal</label><br>
+        <input type="radio" id="business" name="account-type" value="business">
+        <label for="business">Business</label><br><br>
+
+        <label for="profile-picture">Upload a profile picture:</label><br>
+        <input type="file" id="profile-picture" name="profile-picture" style="margin-bottom: 10px;"><br>
+
+        <label for="age">Input your age (years):</label><br>
+        <input type="number" id="age" name="age" style="width: 100%; margin-bottom: 10px;"><br>
+
+        <label for="how-did-you-hear">How did you hear about us?</label><br>
+        <select id="how-did-you-hear" name="how-did-you-hear" style="width: 100%; margin-bottom: 10px;">
+            <option value="">(select one)</option>
+            <option value="friends">Friends</option>
+            <option value="social-media">Social Media</option>
+            <option value="ads">Advertisements</option>
+            <option value="other">Other</option>
+        </select><br>
+
+        <label for="bio">Provide a bio:</label><br>
+        <textarea id="bio" name="bio" rows="4" style="width: 100%; margin-bottom: 10px;">I like coding on the beach...</textarea><br>
+
+        <input type="checkbox" id="terms" name="terms" style="margin-bottom: 10px;">
+        <label for="terms">I accept the <a href="#" style="color: #00aaff;">terms and conditions</a></label><br><br>
+
+        <button type="submit" style="background-color: #0fbbef;">Submit</button>
+    </form>
+    
+</body>
+</html>
